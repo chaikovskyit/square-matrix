@@ -1,0 +1,137 @@
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .matrixContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 50px;
+    margin-bottom: 30px;
+
+    .matrix {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+
+      .matrixRow {
+        display: flex;
+        flex-grow: 1;
+
+        .square {
+          display: flex;
+          flex-grow: 1;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid gray;
+          flex-shrink: 1;
+
+          &.hovered {
+            background-color: deepskyblue;
+          }
+        }
+      }
+    }
+
+    .modeContainer {
+      display: flex;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      width: 80%;
+
+      select {
+        margin-right: 20px;
+        padding: 5px;
+        width: 60%;
+        outline: none;
+      }
+
+      button {
+        background-color: deepskyblue;
+        color: white;
+        font-weight: bold;
+        width: 40%;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        &:hover {
+          opacity: 0.7;
+        }
+        &:disabled {
+          background-color: grey;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .matrixRow {
+      display: flex;
+      flex: 1;
+      .square {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid gray;
+        min-width: 15px;
+        min-height: 15px;
+
+        &.hovered {
+          background-color: deepskyblue;
+        }
+      }
+    }
+  }
+
+  .hoversContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      color: rgb(128, 122, 122);
+    }
+
+    .list {
+      overflow-y: auto;
+      max-height: 80vh;
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 10px;
+      padding-left: 0;
+
+      li {
+        background-color: oldlace;
+        border: 2px solid papayawhip;
+        color: rgb(118, 59, 32);
+        font-weight: bold;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .matrixRow .square {
+    margin-top: -1px;
+    margin-left: -1px;
+  }
+}
